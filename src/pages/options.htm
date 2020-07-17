@@ -2,8 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link href="chrome://browser/content/extension.css" rel="stylesheet">
-			<!-- healthy redundancy in case the page is opened directly -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="httpz.css" rel="stylesheet">
 		<link href="options.css" rel="stylesheet">
 	</head>
@@ -42,7 +41,7 @@
 					<x-fill></x-fill>
 					<div>
 						<div class="browser-style flex row align-center justify-end">
-							<label for="i_session">Until Firefox is restarted</label>
+							<label for="i_session">Until browser is restarted</label>
 							<input id="i_session" name="period" type="radio" value=0>
 						</div>
 						<div class="browser-style flex row align-center justify-end">
@@ -139,6 +138,7 @@
 				</div>
 			</div>
 		</div>
+	<script src="../browser-polyfill.js"></script>
 	<script src="options.js"></script>
 	</body>
 </html>

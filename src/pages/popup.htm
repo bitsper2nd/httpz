@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="httpz.css" rel="stylesheet">
 		<link href="popup.css" rel="stylesheet">
 	</head>
@@ -13,10 +14,11 @@
 			<li>You attempted to visit the site over HTTPS yourself (knowingly or not)</li>
 		</ul>
 		<div id="incognito">
-			<img src="chrome://browser/skin/privatebrowsing/private-browsing.svg"></img>
+			<!-- <img src="chrome://browser/skin/privatebrowsing/private-browsing.svg"></img> -->
 			Sites excluded from a Private Browsing window will not be visible in the options page
 		</div>
 		<button class="browser-style" id="b_whitelist"></button>
+		<script src="../browser-polyfill.js"></script>
 		<script src="popup.js"></script>
 	</body>
 </html>

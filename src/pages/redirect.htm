@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link href="chrome://browser/content/extension.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="httpz.css" rel="stylesheet">
 		<link href="error.css" rel="stylesheet">
 	</head>
@@ -12,6 +12,7 @@
 			<p>The server at <code id="host" data-info="">(loading...)</code> tried to redirect the request to HTTP</p>
 			<button id="continue" type="button" class="browser-style" disabled>Proceed with redirection</button>
 		</div>
+		<script src="../browser-polyfill.js"></script>
 		<script src="redirect.js"></script>
 	</body>
 </html>

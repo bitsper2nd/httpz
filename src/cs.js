@@ -1,7 +1,7 @@
 (() => {
 	'use strict';
-	browser.runtime.sendMessage({
-		action: 'content script',
+	var cs = chrome.runtime.sendMessage({
+		action: 'contentScript',
 		host: location.host,
 		protocol: location.protocol
 	});

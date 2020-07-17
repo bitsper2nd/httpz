@@ -1,12 +1,51 @@
 {
+	"manifest_version": 2,
+	"name": "HTTPZ",
+	"author": "claustromaniac",
+	"version": "0.12.1",
+	"description": "Zapping those inZecure connections into sublime submission since ~2018.",
+	"homepage_url": "https://github.com/claustromaniac/httpz",
+
 	"applications": {
 		"gecko": {
 			"id": "httpz@cm.org",
 			"strict_min_version": "60.0"
 		}
 	},
+	
+	"icons": { 
+		"16": "assets/httpz16.png",
+		"32": "assets/httpz32.png",
+		"48": "assets/httpz48.png",
+		"64": "assets/httpz64.png",
+		"128": "assets/httpz128.png"
+	},
+
+	"browser_action": {
+		"browser_style": true,
+		"default_icon": {
+		"16": "assets/httpz16.png",
+		"32": "assets/httpz32.png",
+		"48": "assets/httpz48.png",
+		"64": "assets/httpz64.png",
+		"128": "assets/httpz128.png"
+	},
+		"default_popup": "pages/popup.htm",
+		"default_title": "HTTPZ"
+	},
+
+	"permissions": [
+		"idle",
+		"storage",
+		"tabs",
+		"webRequest",
+		"webRequestBlocking",
+		"<all_urls>"
+	],
+
 	"background": {
 		"scripts": [
+			"browser-polyfill.js",
 			"bg/main.js",
 			"bg/runtime.js",
 			"bg/tabs.js",
@@ -20,30 +59,10 @@
 			"run_at": "document_end"
 		}
 	],
-	"description": "Zapping those inZecure connections into sublime submission since ~2018.",
-	"author": "claustromaniac",
-	"homepage_url": "https://github.com/claustromaniac/httpz",
-	"icons": {"64": "assets/httpz.svg"},
-	"manifest_version": 2,
-	"name": "HTTPZ",
+
 	"optional_permissions": ["downloads"],
 	"options_ui": {
-		"browser_style": true,
+		"browser_style": false,
 		"page": "pages/options.htm"
-	},
-	"page_action": {
-		"browser_style": true,
-		"default_icon": {"64": "assets/httpz.svg"},
-		"default_popup": "pages/popup.htm",
-		"default_title": "HTTPZ"
-	},
-	"permissions": [
-		"idle",
-		"storage",
-		"tabs",
-		"webRequest",
-		"webRequestBlocking",
-		"<all_urls>"
-	],
-	"version": "0.12.0"
-}
+	}
+	}
